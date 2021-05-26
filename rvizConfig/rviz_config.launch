@@ -1,0 +1,2 @@
+<!--launch rviz-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rvizConfig)/rviz_config.rviz" respawn="false"/>
