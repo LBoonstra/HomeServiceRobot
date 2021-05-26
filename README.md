@@ -26,7 +26,8 @@ sudo apt-get install xterm
 ```
 
 Create a workspace and initialize it:
-```mkdir -p catkin_ws/src
+```
+mkdir -p catkin_ws/src
 cd catkin_ws/src 
 catkin_init_workspace
 ```
@@ -39,13 +40,15 @@ git clone --recurse-submodules https://github.com/LBoonstra/HomeServiceRobot.git
 
 Go to the workspace (navigate up), build and source
 
-```cd ..
+```
+cd ..
 catkin_make
 source devel/setup.bash
 ```
 Finally turn the scripts into executables and run
 
-```cd src/scripts
+```
+cd src/scripts
 chmod +x home_service.sh
 ./home_service.sh
 ```
