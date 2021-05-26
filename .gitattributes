@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Set the default behavior, to LF
+* text eol=lf
