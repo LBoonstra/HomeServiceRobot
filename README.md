@@ -32,7 +32,7 @@ cd catkin_ws/src
 catkin_init_workspace
 ```
 
-Then clone the repository to the src:
+Then clone the repository and move the folders into the src folder:
 
 ```
 git clone --recurse-submodules https://github.com/LBoonstra/HomeServiceRobot.git
