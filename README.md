@@ -35,12 +35,14 @@ catkin_init_workspace
 Then clone the repository and move the folders into the src folder:
 
 ```
-git clone --recurse-submodules https://github.com/LBoonstra/HomeServiceRobot.git
+git clone https://github.com/LBoonstra/HomeServiceRobot.git
 ```
 
 Go to the workspace (catkin_ws), build and source
 
 ```
+source devel/setup.bash
+rosdep -i install turtlebot_teleop
 catkin_make
 source devel/setup.bash
 ```
