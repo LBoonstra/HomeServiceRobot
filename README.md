@@ -38,10 +38,9 @@ Then clone the repository and move the folders into the src folder:
 git clone --recurse-submodules https://github.com/LBoonstra/HomeServiceRobot.git
 ```
 
-Go to the workspace (navigate up), build and source
+Go to the workspace (catkin_ws), build and source
 
 ```
-cd ..
 catkin_make
 source devel/setup.bash
 ```
