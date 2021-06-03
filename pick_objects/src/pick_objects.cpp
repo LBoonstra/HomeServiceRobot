@@ -49,7 +49,6 @@ int main(int argc, char** argv){
 
   //Sleep to simulate the pick up
   ros::Duration(5.0).sleep();
-  pub.publish(moved);
   ROS_INFO("Robot has picked up the object. Robot will move to the drop off location.");
   //Move to the drop off location
   goal.target_pose.pose.position.x= -2.0;

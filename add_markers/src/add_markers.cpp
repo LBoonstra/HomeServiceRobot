@@ -5,7 +5,6 @@
 double pick_up_zone[]={1.0,1.0,0};
 double drop_off_zone[]={-2.0,-2.0,0};
 bool reached_pick_up = false;
-bool picked_up = false;
 bool reach_drop_off = false;
 bool value;
 
@@ -14,10 +13,6 @@ void robotMoving(const std_msgs::Bool::ConstPtr& msg){
   if(!reached_pick_up && value ==true){
     ROS_INFO("Robot reached the pick up zone");
 	reached_pick_up = true;
-  }
-  else if(!picked_up && value == true){
-	ROS_INFO("Object was picked up");
-	picked_up = true;
   }
   else if(reached_pick_up && value == true){
 	ROS_INFO("Robot has reached the drop off zone");
@@ -82,19 +77,15 @@ int main( int argc, char** argv )
 		marker.action = visualization_msgs::Marker::ADD;
 		marker_pub.publish(marker);
 	}
-	else if(reached_pick_up&& !picked_up && !reach_drop_off){
+	else if(reached_pick_up && !reach_drop_off){
 		marker.action = visualization_msgs::Marker::DELETE;
 		marker_pub.publish(marker);
 	}
-	else if(picked_up && reached_pick_up &&!reach_drop_off){
+	else if(reached_pick_up && reach_drop_off){
 		marker.action = visualization_msgs::Marker::ADD;
 		marker.pose.position.x = drop_off_zone[0];
 		marker.pose.position.y = drop_off_zone[1];
 		marker.pose.position.z = drop_off_zone[2];
-		marker_pub.publish(marker);
-	}
-	else if(picked_up && reached_pick_up && reach_drop_off){
-		marker.action = visualization_msgs::Marker::DELETE;
 		marker_pub.publish(marker);
 	}
 	else{
