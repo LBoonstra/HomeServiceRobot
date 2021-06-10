@@ -196,7 +196,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_add_markers.cpp)
+#catkin_add_gtest(${PROJECT_NAME}-test test/add_markers_test.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
@@ -205,3 +205,5 @@ include_directories(
 # catkin_add_nosetests(test)
 add_executable(add_markers src/add_markers.cpp)
 target_link_libraries(add_markers ${catkin_LIBRARIES})
+add_executable(add_markers_test src/add_markers_test.cpp)
+target_link_libraries(add_markers_test ${catkin_LIBRARIES})
