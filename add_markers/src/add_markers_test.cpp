@@ -24,7 +24,7 @@ int main( int argc, char** argv )
     marker.ns = "marker";
     marker.id = 0;
 
-    // Set the marker type.  Initially this is CUBE, and cycles between that and SPHERE, ARROW, and CYLINDER
+    // Set the marker type.
     marker.type = shape;
     // Set the marker action.  Options are ADD, DELETE, and new in ROS Indigo: 3 (DELETEALL)
     marker.action = visualization_msgs::Marker::ADD;
